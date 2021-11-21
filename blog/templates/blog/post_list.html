@@ -1,18 +1,27 @@
+{% load static %}
 <html>
     <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <title>Django Girls blog</title>
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
     <body>
-<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-</div>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        
+         <div>
+            <p>published: 21.11.2021, 12:00</p>
+            <h2><a href="">My first post</a></h2>
+            <p>사업으로 200억 벌기</p>
+        </div>
 
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-{% endfor %}
+        <div>
+            <p>published: 21.11.2021, 12:01</p>
+            <h2><a href="">My second post</a></h2>
+            <p>인생역전 가즈악</p>
+        </div>
     </body>
 </html>
